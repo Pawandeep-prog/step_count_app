@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <data>
+        <variable
+            name="steps"
+            type="com.programminghut.stepcountapp.viewmodels.StepCountViewModel" />
+    </data>
+
+<RelativeLayout
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+        android:id="@+id/textView"
+        android:layout_below="@+id/btn"
+        android:text="@{steps.stepCount}" />
+
+    <com.google.android.material.button.MaterialButton
+        android:layout_width="wrap_content"
+        android:layout_height="50dp"
+        android:text="refresh count"
+        android:id="@+id/btn"
+        android:textAllCaps="false"
+        app:cornerRadius="5dp"
+        android:onClick="signInBtn"
+        android:backgroundTint="#EC7070"/>
+
+
+</RelativeLayout>
+
+</layout>
